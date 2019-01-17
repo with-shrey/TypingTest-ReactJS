@@ -86,7 +86,7 @@ class App extends Component {
               <div className="card">
                 <div className="card-body">
                   <h5 className="card-title">Type this text :</h5>
-                  <p className="card-text" className="text-box">
+                  <p className="card-text text-box">
                     {
                     this.renderDisplayText()
                     }
@@ -102,7 +102,7 @@ class App extends Component {
                   <div className="row">
               <div className="col-md-6 offset-md-3">
               <textarea rows="6" className='input-box' onChange={this.handleTextArea}
-                        value={this.state.textArea}></textarea>
+                        value={this.state.textArea}/>
               </div>
                   </div>
                   <div className="row">
@@ -118,8 +118,6 @@ class App extends Component {
                   </div>
                 </div>
             }
-            
-         
         </div>
       </React.Fragment>
     );
