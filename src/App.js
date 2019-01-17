@@ -21,7 +21,8 @@ class App extends Component {
   }
   
   startQuiz() {
-    this.setState({started:true})
+    this.setState({started:true,score:null,seconds: 60,
+      count: 0})
     this.interval = setInterval( () => {
       if ( this.state.seconds - 1 === 0 ){
         this.endQuiz()
@@ -54,7 +55,13 @@ class App extends Component {
         score-=5
       }
     }
-    this.setState({score,count:noOfWrittenWords,noOfWrittenWords,writtenText:'',inputText:[]})
+    this.setState({
+      score,
+      count:noOfWrittenWords,
+      started:false,
+      textArea:'',
+      inputText:[]
+    })
   }
   
   render() {
