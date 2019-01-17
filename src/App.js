@@ -48,7 +48,7 @@ class App extends Component {
     const writtenText=this.state.textArea.trim().split(' ')
     const noOfWrittenWords = writtenText.length
     for ( let i=0;i< noOfWrittenWords;i++ ){
-      if ( writtenText[i] == inputText[i] ){
+      if ( writtenText[i] === inputText[i] ){
         score+=10
       } else{
         score-=5
