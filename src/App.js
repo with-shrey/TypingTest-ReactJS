@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import textString from './text'
+import swal from 'sweetalert'
 
 class App extends Component {
   constructor( props ) {
@@ -55,6 +56,13 @@ class App extends Component {
         score-=5
       }
     }
+    swal( {
+      icon: "success",
+      title: "Time Is Up",
+      text: `Your Score Is ${score}\nWords Written ${noOfWrittenWords}\nWords Per Seconds ${( ( noOfWrittenWords ) / 60 ).toFixed( 2 )}`,
+      closeOnClickOutside: false,
+      closeOnEsc: false,
+    } )
     this.setState({
       score,
       count:noOfWrittenWords,
