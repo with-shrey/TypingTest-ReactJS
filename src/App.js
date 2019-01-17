@@ -40,7 +40,7 @@ class App extends Component {
   
   renderDisplayText(){
     return this.state.text.map( ( word, index ) => {
-      return ( <span className={index === this.state.count ? `highlight` : ''}>{`${word} `}</span> )
+      return ( <span key={index} className={index === this.state.count ? `highlight` : ''}>{`${word} `}</span> )
     } )
   }
   
